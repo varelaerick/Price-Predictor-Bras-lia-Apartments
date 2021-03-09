@@ -82,3 +82,14 @@ The best model was XGBRegressor reaching the following scores in the test set:
  
 Author: Erick C. Varela<br/>
 Date: 17/12/2020
+
+<br/>
+<br/>
+<br/>
+
+## For the full dynamic visualizations:
+
+### [See The Kernel On Kaggle](https://www.kaggle.com/erickvarela/price-prediction-brasilia-apartments)
+
+
+### [Or On Nbviewer](https://nbviewer.jupyter.org/github/varelaerick/Price-Predictor-Bras-lia-Apartments/blob/main/price-prediction-brasilia-apartments.ipynb)
