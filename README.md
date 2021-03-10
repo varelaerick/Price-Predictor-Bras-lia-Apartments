@@ -6,11 +6,10 @@ The main objective of the project was to work with a messy data set, extracted f
  
 ## Overview
  
-Created a predictor that estimates the Brasilia apartments prices to help 
-buyers and sellers to deal
-Scraped over 3000 apartments for sale from Vila Real using python and selenium
-Engineered features from the address filled by the sellers, to get the address, neighborhood and the AR (administrative region) correctly returned by the Correios API.
-Built a pipeline that optimized Lasso, KernelRidge, Elastic Net, XGBRegressor and LGBRegressor using GridsearchCV to reach the best model.
+* Created a predictor that estimates the Brasilia apartments prices to help buyers and sellers to deal
+* Scraped over 3000 apartments for sale from Vila Real using python and selenium
+* Engineered features from the address filled by the sellers, to get the address, neighborhood and the AR (administrative region) correctly returned by the Correios API.
+* Built a pipeline that optimized Lasso, KernelRidge, Elastic Net, XGBRegressor and LGBRegressor using GridsearchCV to reach the best model.
  
 ## Resources Used
  
