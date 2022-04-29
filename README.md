@@ -2,13 +2,13 @@
  
 ## Motivation
  
-The main objective of the project was to work with a messy data set, extracted from the web and even with a relatively small dataset with a few features. I spent a lot of time in the feature engineering processes to be able to build a regression model that gives us a very good score. 
+The project's main objective was to work with a messy data set extracted from the web and even with a relatively small dataset with a few features. I spent a lot of time in the feature engineering processes to be able to build a regression model that gives us a good score. 
  
 ## Overview
  
 * Created a predictor that estimates the Brasilia apartments prices to help buyers and sellers to deal
 * Scraped over 3000 apartments for sale from Vila Real using python and selenium
-* Engineered features from the address filled by the sellers, to get the address, neighborhood, and the AR (administrative region) correctly returned by the Correios API.
+* Engineered features from the Address filled by the sellers to get the Address, neighborhood, and the AR (administrative region) correctly returned by the Correios API.
 * Built a pipeline that optimized Lasso, KernelRidge, Elastic Net, XGBRegressor, and LGBRegressor using GridsearchCV to reach the best model.
  
 ## Resources Used
@@ -19,13 +19,13 @@ The main objective of the project was to work with a messy data set, extracted f
  
 ## Web Scraping
  
-Scraped over 3000 apartments from all over Brasília from Viva Real website. With each apartment, we got the address, the title, the area in m², the number of rooms, number of bathrooms, number of garages, the condo fees, the price, and the amenities items.
+I scraped over 3000 apartments from all over Brasília from Viva Real website. With each apartment, we got the Address, the title, the area in m², the number of rooms, the number of bathrooms, the number of garages, the condo fees, the price, and the amenities items.
 
 ## Feature Engineering
  
-After scraping, I needed to clean it up so that it was usable for our model. I made the following changes and created the following features:
+After scraping, I needed to clean it up to be usable for our model. I made the following changes and created the following features:
 * Dropped the null features 
-* Cleaned the address columns and sent parts of the address to de Correio API to get the correct Address and defining the Neighborhood and AR column.
+* Cleaned the address columns and sent parts of the Address to de Correio API to get the correct Address and define the Neighborhood and AR column.
 * Filled all Address null values 
 * Filled all the Neighborhood null values 
 * Filled all AR null values
@@ -44,20 +44,20 @@ To understand and prepare the DataFrame for the modeling I plotted a few visuali
 <img src="PP-BA-IMG/folium-map.png" width="500" > 
 </p>
  
-* Second, I plotted the DF as Box Plot and look for some inaccuracy and outliers
+* Second, I plotted the DF as Box Plot and looked for some inaccuracy and outliers
  
 <p align="center">
 <img src="PP-BA-IMG/boxplot.png" width="300" > 
 </p>
  
-* Third, for understanding the normalization, I plotted the distribution before and after normalization and scale.
+* Third, to understand the normalization, I plotted the distribution before and after normalization and scale.
  
 <p align="center">
 <img src="PP-BA-IMG/distribution-before-norm-scale.png" width="500" > 
 <br/>
 <img src="PP-BA-IMG/distribution-after-norm-scale.png" width="500" > 
  
-* Fourth, to visualize the personal correlation I used a Heat Map. 
+* Fourth, I used a Heat Map to visualize the personal correlation. 
  
 <p align="center">
 <img src="PP-BA-IMG/heat-map.png" width="500" > 
@@ -66,8 +66,8 @@ To understand and prepare the DataFrame for the modeling I plotted a few visuali
  
 ## Model
  
-First I transformed the categorical variables into dummy variables and also split the data into train and test sets with a test size of 30%.
-To choose the best model I tried Lasso (l1), Kernel Ridge (l2), Elastic NNet, Xgb Regressor, or Lgbm Regressor. I created a Pipeline with Hyperparameter Tuning using Grid Search and 10 K-Folds shuffled. The score used will be neg_root_mean_squared_error.
+First, I transformed the categorical variables into dummy variables and also split the data into train and test sets with a test size of 30%.
+I tried Lasso (l1), Kernel Ridge (l2), Elastic NNet, Xgb Regressor, and Lgbm Regressor to choose the best model. I created a Pipeline with Hyperparameter Tuning using Grid Search, and 10 K-Folds shuffled. The score used will be neg_root_mean_squared_error.
  
 ## Model performance
  
